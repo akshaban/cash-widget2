@@ -81,42 +81,42 @@
 <div class="widget">
 
   <div class="header">
-    <div class="shop-name">Pawn Shop — Manager Dashboard</div>
+    <div class="shop-name">Pawn Shop  -  Manager Dashboard</div>
     <div class="header-title" id="hdr-title">Daily Cash Requirement</div>
-    <div class="header-date"  id="hdr-date">—</div>
+    <div class="header-date"  id="hdr-date"> - </div>
   </div>
 
   <div class="main-cash">
     <div class="main-label">Cash Needed to Start the Day</div>
-    <div class="main-amount" id="main-amount">—</div>
-    <div class="main-sub"    id="main-sub">—</div>
+    <div class="main-amount" id="main-amount"> - </div>
+    <div class="main-sub"    id="main-sub"> - </div>
   </div>
 
   <div class="formula">
-    <div class="fpart"><div class="fval gold"  id="f-float">—</div><div class="flbl">Float</div></div>
+    <div class="fpart"><div class="fval gold"  id="f-float"> - </div><div class="flbl">Float</div></div>
     <div class="fop">+</div>
-    <div class="fpart"><div class="fval red"   id="f-out">—</div><div class="flbl">Cash Out</div></div>
+    <div class="fpart"><div class="fval red"   id="f-out"> - </div><div class="flbl">Cash Out</div></div>
     <div class="fop">−</div>
-    <div class="fpart"><div class="fval green" id="f-in">—</div><div class="flbl">Cash In (15%)</div></div>
+    <div class="fpart"><div class="fval green" id="f-in"> - </div><div class="flbl">Cash In (15%)</div></div>
     <div class="fop">=</div>
-    <div class="fpart"><div class="fval gold"  id="f-total">—</div><div class="flbl">Start With</div></div>
+    <div class="fpart"><div class="fval gold"  id="f-total"> - </div><div class="flbl">Start With</div></div>
   </div>
 
   <div class="breakdown">
     <div class="card pawns">
       <div class="card-label">Pawns Out</div>
-      <div class="card-amount" id="pawns-amt">—</div>
-      <div class="card-sub"    id="pawns-sub">—</div>
+      <div class="card-amount" id="pawns-amt"> - </div>
+      <div class="card-sub"    id="pawns-sub"> - </div>
     </div>
     <div class="card buys">
       <div class="card-label">Buys Out</div>
-      <div class="card-amount" id="buys-amt">—</div>
-      <div class="card-sub"    id="buys-sub">—</div>
+      <div class="card-amount" id="buys-amt"> - </div>
+      <div class="card-sub"    id="buys-sub"> - </div>
     </div>
     <div class="card cash-in">
       <div class="card-label">Expected Cash Inflow (redistributable)</div>
-      <div class="card-amount green" id="cashin-amt">—</div>
-      <div class="card-sub">85% of inflows are paid by card — only 15% arrives as cash</div>
+      <div class="card-amount green" id="cashin-amt"> - </div>
+      <div class="card-sub">85% of inflows are paid by card  -  only 15% arrives as cash</div>
     </div>
   </div>
 
@@ -142,51 +142,51 @@
     <div class="ctx-item">
       <div class="ctx-icon" style="background:rgba(201,168,76,0.1)">📅</div>
       <div class="ctx-text">
-        <div class="ctx-title" id="dow-title">—</div>
-        <div class="ctx-desc"  id="dow-desc">—</div>
+        <div class="ctx-title" id="dow-title"> - </div>
+        <div class="ctx-desc"  id="dow-desc"> - </div>
       </div>
-      <div class="badge" id="dow-badge">—</div>
+      <div class="badge" id="dow-badge"> - </div>
     </div>
     <div class="ctx-item">
       <div class="ctx-icon" style="background:rgba(46,204,113,0.1)">💰</div>
       <div class="ctx-text">
-        <div class="ctx-title" id="pay-title">—</div>
-        <div class="ctx-desc"  id="pay-desc">—</div>
+        <div class="ctx-title" id="pay-title"> - </div>
+        <div class="ctx-desc"  id="pay-desc"> - </div>
       </div>
-      <div class="badge" id="pay-badge">—</div>
+      <div class="badge" id="pay-badge"> - </div>
     </div>
     <div class="ctx-item">
       <div class="ctx-icon" style="background:rgba(52,152,219,0.1)">📆</div>
       <div class="ctx-text">
-        <div class="ctx-title" id="season-title">—</div>
-        <div class="ctx-desc"  id="season-desc">—</div>
+        <div class="ctx-title" id="season-title"> - </div>
+        <div class="ctx-desc"  id="season-desc"> - </div>
       </div>
-      <div class="badge" id="season-badge">—</div>
+      <div class="badge" id="season-badge"> - </div>
     </div>
     <div class="ctx-item">
       <div class="ctx-icon" style="background:rgba(231,76,60,0.1)">⚠️</div>
       <div class="ctx-text">
         <div class="ctx-title">Worst Case on Record</div>
-        <div class="ctx-desc"  id="worst-desc">—</div>
+        <div class="ctx-desc"  id="worst-desc"> - </div>
       </div>
     </div>
     <div class="ctx-item">
       <div class="ctx-icon" style="background:rgba(46,204,113,0.1)">💡</div>
       <div class="ctx-text">
         <div class="ctx-title">Recommendation</div>
-        <div class="ctx-desc"  id="rec-desc">—</div>
+        <div class="ctx-desc"  id="rec-desc"> - </div>
       </div>
     </div>
   </div>
 
   <div class="footer">
-    <div class="footer-time" id="footer-time">—</div>
+    <div class="footer-time" id="footer-time"> - </div>
     <div class="footer-src"  id="data-source">Loading...</div>
   </div>
 
 </div>
 <script>
-// ── DATA ─────────────────────────────────────────────────────────────────────
+// -- DATA ---------------------------------------------------------------------
 // byPayPeriod: start=1-5, mid=6-14, payday15=15-17, late=18-26, end=27-31
 const DATA = {
   dow: {
@@ -201,16 +201,16 @@ const DATA = {
   monthlyNet: { 1:2522, 2:1944, 3:2157, 4:2407, 5:2283, 6:2778, 7:2492, 8:2568, 9:2968, 10:3106, 11:2821, 12:2905 },
   monthNames: ['January','February','March','April','May','June','July','August','September','October','November','December'],
   payPeriodLabel: {
-    start:    'Start of month (days 1–5) — customers get paid and redeem items. Less cash goes out.',
-    mid:      'Mid-month (days 6–14) — slowest redemptions, heaviest pawn days. Most cash needed.',
-    payday15: '15th payday window (days 15–17) — mild redemption bump from semi-monthly payroll.',
-    late:     'Late month (days 18–26) — moderate. Approaching month-end redemption cycle.',
-    end:      'End of month (days 27–31) — strong redemptions. Customers flush with end-of-month pay.',
+    start:    'Start of month (days 1-5)  -  customers get paid and redeem items. Less cash goes out.',
+    mid:      'Mid-month (days 6-14)  -  slowest redemptions, heaviest pawn days. Most cash needed.',
+    payday15: '15th payday window (days 15-17)  -  mild redemption bump from semi-monthly payroll.',
+    late:     'Late month (days 18-26)  -  moderate. Approaching month-end redemption cycle.',
+    end:      'End of month (days 27-31)  -  strong redemptions. Customers flush with end-of-month pay.',
   },
   dowNotes: {
     Monday:    'Monday is the HEAVIEST cash-out day (~16 loans). Plan for maximum starting cash.',
     Tuesday:   'Tuesday is above average for cash demand. Card payments dominate inflows.',
-    Wednesday: 'Wednesday has strong buy activity — but 85% of inflows arrive by card.',
+    Wednesday: 'Wednesday has strong buy activity  -  but 85% of inflows arrive by card.',
     Thursday:  'Thursday is the lightest cash-out day. Best day to replenish from the bank.',
     Friday:    'Friday has the highest total inflows but most pay by card.',
     Saturday:  'Saturday is the 2nd busiest pawn day (~15 loans). High foot traffic.',
@@ -220,7 +220,7 @@ const DATA = {
 
 const CSV_URL = “https://docs.google.com/spreadsheets/d/e/2PACX-1vToucoi5daHIJEF2HDa3oVdyHptuiRBA5gpoKJpxSiC6RyodVv8Sdris0BcDSwo6t4aulIowAV7Dp5E/pub?gid=832110387&single=true&output=csv”;
 
-// ── HELPERS ───────────────────────────────────────────────────────────────────
+// – HELPERS —————————————————————––
 const fmt = n => ‘$’ + Math.round(n).toLocaleString(‘en-US’);
 
 function getPayPeriod(dayNum) {
@@ -244,7 +244,7 @@ timeStr:   d.toLocaleTimeString(‘en-US’, {hour:‘numeric’, minute:‘2-di
 };
 }
 
-// ── RENDER ────────────────────────────────────────────────────────────────────
+// – RENDER ––––––––––––––––––––––––––––––––––
 function render() {
 const today     = getToday();
 const d         = DATA.dow[today.dow];
@@ -258,7 +258,7 @@ const adjStart = (!isSun && d.byPayPeriod && d.byPayPeriod[payPeriod])
 ? d.byPayPeriod[payPeriod] : d.totalStart;
 
 // Header
-document.getElementById(‘hdr-title’).textContent = today.dow + ’ — Cash Requirement’;
+document.getElementById(‘hdr-title’).textContent = today.dow + ’  -  Cash Requirement’;
 document.getElementById(‘hdr-date’).textContent  = today.dateStr;
 
 // Main amount
@@ -266,7 +266,7 @@ const mainEl = document.getElementById(‘main-amount’);
 mainEl.textContent = isSun ? ‘$0’ : fmt(adjStart);
 mainEl.className   = ’main-amount ’ + (!isSun && adjStart >= 7000 ? ‘high’ : adjStart >= 5000 ? ‘medium’ : ‘low’);
 document.getElementById(‘main-sub’).textContent = isSun
-? ‘Store closed — no cash preparation needed’
+? ‘Store closed  -  no cash preparation needed’
 : ’Float + projected cash out for ’ + today.dow + ’, day ’ + today.dayNum;
 
 // Formula
@@ -288,7 +288,7 @@ const pct    = adjStart > 0 ? Math.min(95, Math.max(5, (adjStart / maxNet) * 100
 document.getElementById(‘range-dot’).style.left = pct + ‘%’;
 document.getElementById(‘range-lbl’).textContent = today.dow.toUpperCase() + ’ (day ’ + today.dayNum + ‘)’;
 
-// DOW bars — show adjusted start for today’s pay period
+// DOW bars  -  show adjusted start for today’s pay period
 const barsEl  = document.getElementById(‘dow-bars’);
 barsEl.innerHTML = ‘’;
 const dayKeys  = [‘Monday’,‘Tuesday’,‘Wednesday’,‘Thursday’,‘Friday’,‘Saturday’,‘Sunday’];
@@ -311,7 +311,7 @@ const bar  = document.createElement('div'); bar.className  = 'dow-bar ' + cls; b
 bar.title = dk + ': ' + (val > 0 ? fmt(val) : 'Closed');
 const lbl  = document.createElement('div'); lbl.className = 'dow-lbl' + (isToday ? ' today' : ''); lbl.textContent = dayShort[i];
 const cash = document.createElement('div'); cash.className = 'dow-cash' + (isToday ? ' today' : '');
-cash.textContent = val > 0 ? '$' + Math.round(val / 100) / 10 + 'k' : '—';
+cash.textContent = val > 0 ? '$' + Math.round(val / 100) / 10 + 'k' : ' - ';
 wrap.appendChild(bar); wrap.appendChild(lbl); wrap.appendChild(cash);
 barsEl.appendChild(wrap);
 ```
@@ -329,7 +329,7 @@ else                    { dowBadge.textContent = ‘Lighter Day’;  dowBadge.cl
 
 // Pay period context
 const ppLabels = { start:‘Start of Month’, mid:‘Mid-Month’, payday15:‘15th Payday’, late:‘Late Month’, end:‘End of Month’ };
-document.getElementById(‘pay-title’).textContent = ppLabels[payPeriod] + ’ — Day ’ + today.dayNum;
+document.getElementById(‘pay-title’).textContent = ppLabels[payPeriod] + ’  -  Day ’ + today.dayNum;
 document.getElementById(‘pay-desc’).textContent  = DATA.payPeriodLabel[payPeriod];
 const diff = adjStart - d.totalStart;
 const payBadge = document.getElementById(‘pay-badge’);
@@ -350,19 +350,19 @@ sBadge.textContent = sbtext; sBadge.className = sbcls;
 
 // Worst case
 document.getElementById(‘worst-desc’).textContent = isSun
-? ‘Store closed — no cash risk today.’
+? ‘Store closed  -  no cash risk today.’
 : ‘Worst recorded ’ + today.dow + ’ morning (open to noon): ’ + fmt(d.worstMorning) + ’ went out before any inflows. The float covers 9 out of 10 mornings.’;
 
 // Recommendation
 document.getElementById(‘rec-desc’).textContent = isSun
 ? ‘No action needed.’
-: ’Open with ’ + fmt(adjStart) + ’ in the drawer — ’ + fmt(d.minFloat) + ’ float buffer plus ’ + fmt(Math.max(adjStart - d.minFloat, 0)) + ’ projected net cash out. ’ + (diff < -200 ? ’Today is lighter than average for ’ + today.dow + ‘s.’ : diff > 200 ? ’Today is heavier than average for ’ + today.dow + ‘s.’ : ‘’);
+: ’Open with ’ + fmt(adjStart) + ’ in the drawer  -  ’ + fmt(d.minFloat) + ’ float buffer plus ’ + fmt(Math.max(adjStart - d.minFloat, 0)) + ’ projected net cash out. ’ + (diff < -200 ? ’Today is lighter than average for ’ + today.dow + ‘s.’ : diff > 200 ? ’Today is heavier than average for ’ + today.dow + ‘s.’ : ‘’);
 
 // Footer
 document.getElementById(‘footer-time’).textContent = ‘Loaded: ’ + today.dateStr.split(’,’)[0] + ’ at ’ + today.timeStr;
 }
 
-// ── LIVE FETCH ────────────────────────────────────────────────────────────────
+// – LIVE FETCH ––––––––––––––––––––––––––––––––
 function parseCSV(text) {
 return text.trim().split(’\n’).map(row => {
 const cells = []; let cur = ‘’; let inQ = false;
@@ -419,7 +419,7 @@ days.forEach(day => {
   // byPayPeriod: use same cash-in/out but adjust inflows won't vary by pay period from _Ref
   // Keep existing byPayPeriod ratios, scale them to match new totalStart
   const oldTs = DATA.dow[day].totalStart || ts;
-  // Already updated above — byPayPeriod stays as baked (pay period split from historical data)
+  // Already updated above  -  byPayPeriod stays as baked (pay period split from historical data)
 });
 
 // Monthly net from row 24 (0-indexed), cols 1-12
@@ -428,7 +428,7 @@ for (let m = 1; m <= 12; m++) {
   if (v > 0) DATA.monthlyNet[m] = Math.round(v);
 }
 
-document.getElementById('data-source').textContent = 'Live from Google Sheets ✓';
+document.getElementById('data-source').textContent = 'Live from Google Sheets OK';
 document.getElementById('data-source').style.color = '#2ECC71';
 render();
 ```
