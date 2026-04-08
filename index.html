@@ -8,14 +8,10 @@
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'Segoe UI',Arial,sans-serif; background:#0D1B2A; color:#fff; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:16px; }
   .widget { width:400px; border-radius:16px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.6); border:1px solid #2a3f5a; }
-
-  /* HEADER */
   .header { background:linear-gradient(135deg,#1B2A4A 0%,#0D1B2A 100%); padding:18px 22px 14px; border-bottom:2px solid #C9A84C; }
   .shop-name { font-size:10px; font-weight:700; letter-spacing:2px; color:#C9A84C; text-transform:uppercase; margin-bottom:3px; }
   .header-title { font-size:17px; font-weight:700; color:#fff; margin-bottom:2px; }
   .header-date  { font-size:11px; color:#7f9ab5; }
-
-  /* TOTAL */
   .total-section { background:#1B2A4A; padding:20px 22px 16px; text-align:center; border-bottom:1px solid #2a3f5a; }
   .total-label { font-size:9px; font-weight:700; letter-spacing:2px; color:#7f9ab5; text-transform:uppercase; margin-bottom:6px; }
   .total-amount { font-size:48px; font-weight:800; line-height:1; letter-spacing:-2px; }
@@ -23,8 +19,6 @@
   .total-amount.medium { color:#E67E22; }
   .total-amount.high   { color:#E74C3C; }
   .total-sub { font-size:10px; color:#7f9ab5; margin-top:6px; }
-
-  /* BREAKDOWN STACK */
   .stack { background:#162236; padding:14px 22px; border-bottom:1px solid #2a3f5a; display:flex; flex-direction:column; gap:8px; }
   .stack-row { display:flex; align-items:center; background:#1B2A4A; border-radius:10px; padding:11px 14px; gap:12px; }
   .stack-row.float-row { border-left:3px solid #C9A84C; }
@@ -39,8 +33,6 @@
   .stack-val.red   { color:#E74C3C; }
   .stack-val.green { color:#2ECC71; }
   .stack-divider { text-align:center; font-size:12px; color:#2a3f5a; font-weight:300; padding:0 4px; }
-
-  /* FORMULA */
   .formula { background:#0f1e30; padding:10px 22px; border-bottom:1px solid #2a3f5a; display:flex; align-items:center; justify-content:center; gap:6px; flex-wrap:wrap; }
   .fpart { text-align:center; }
   .fval { font-size:13px; font-weight:700; }
@@ -49,8 +41,6 @@
   .fval.green { color:#2ECC71; }
   .flbl { font-size:8px; color:#4a6080; text-transform:uppercase; letter-spacing:1px; }
   .fop  { font-size:18px; color:#3a5070; align-self:center; }
-
-  /* CARDS */
   .cards { background:#162236; padding:12px 22px; display:grid; grid-template-columns:1fr 1fr; gap:8px; border-bottom:1px solid #2a3f5a; }
   .card { background:#1B2A4A; border-radius:10px; padding:12px; }
   .card.pawns { border-left:3px solid #E74C3C; }
@@ -58,8 +48,6 @@
   .card-lbl { font-size:9px; font-weight:700; letter-spacing:1.5px; color:#7f9ab5; text-transform:uppercase; margin-bottom:4px; }
   .card-amt { font-size:20px; font-weight:800; color:#fff; }
   .card-sub { font-size:9px; color:#7f9ab5; margin-top:2px; }
-
-  /* DOW BARS */
   .dow-section { background:#1B2A4A; padding:12px 22px; border-bottom:1px solid #2a3f5a; }
   .dow-head { font-size:9px; font-weight:700; letter-spacing:2px; color:#7f9ab5; text-transform:uppercase; margin-bottom:10px; }
   .dow-bars { display:flex; align-items:flex-end; gap:4px; height:56px; }
@@ -75,8 +63,6 @@
   .dow-lbl.today  { color:#C9A84C; }
   .dow-cash { font-size:7px; color:#4a6080; }
   .dow-cash.today { color:#a08030; }
-
-  /* CONTEXT */
   .context { background:#1B2A4A; padding:12px 22px; border-bottom:1px solid #2a3f5a; }
   .ctx-item { display:flex; align-items:flex-start; gap:10px; padding:7px 0; border-bottom:1px solid #0D1B2A; }
   .ctx-item:last-child { border-bottom:none; }
@@ -91,8 +77,6 @@
   .badge.green  { background:rgba(46,204,113,0.2); color:#2ECC71; }
   .badge.gray   { background:rgba(127,154,181,0.15);color:#7f9ab5; }
   .badge.gold   { background:rgba(201,168,76,0.2); color:#C9A84C; }
-
-  /* FOOTER */
   .footer { background:#0D1B2A; padding:9px 22px; display:flex; justify-content:space-between; align-items:center; }
   .footer-time { font-size:8px; color:#2a3f5a; }
   .footer-conf { font-size:8px; font-weight:700; letter-spacing:1px; color:#2a3f5a; text-transform:uppercase; }
@@ -102,166 +86,173 @@
 <div class="widget">
 
   <div class="header">
-    <div class="shop-name">Pawn Shop — Manager Dashboard</div>
+    <div class="shop-name">Pawn Shop - Manager Dashboard</div>
     <div class="header-title" id="hdr-title">Daily Cash Requirement</div>
-    <div class="header-date"  id="hdr-date">—</div>
+    <div class="header-date"  id="hdr-date">-</div>
   </div>
 
-  <!-- TOTAL START -->
   <div class="total-section">
     <div class="total-label">Recommended Starting Cash</div>
-    <div class="total-amount" id="total-amt">—</div>
-    <div class="total-sub"    id="total-sub">—</div>
+    <div class="total-amount" id="total-amt">-</div>
+    <div class="total-sub"    id="total-sub">-</div>
   </div>
 
-  <!-- STACK BREAKDOWN -->
   <div class="stack">
     <div class="stack-row float-row">
-      <div class="stack-icon">🛡️</div>
+      <div class="stack-icon">&#128737;</div>
       <div class="stack-text">
         <div class="stack-title">Minimum Float</div>
         <div class="stack-desc" id="float-desc">Buffer to cover worst-case early transactions</div>
       </div>
-      <div class="stack-val gold" id="float-val">—</div>
+      <div class="stack-val gold" id="float-val">-</div>
     </div>
     <div class="stack-divider">+</div>
     <div class="stack-row net-row">
-      <div class="stack-icon">💸</div>
+      <div class="stack-icon">&#128184;</div>
       <div class="stack-text">
         <div class="stack-title">Projected Cash Out</div>
         <div class="stack-desc" id="net-desc">Pawns + buys minus expected cash inflows</div>
       </div>
-      <div class="stack-val red" id="net-val">—</div>
+      <div class="stack-val red" id="net-val">-</div>
     </div>
-    <div class="stack-divider">−</div>
+    <div class="stack-divider">-</div>
     <div class="stack-row cashin-row">
-      <div class="stack-icon">💵</div>
+      <div class="stack-icon">&#128181;</div>
       <div class="stack-text">
         <div class="stack-title">Expected Cash Inflow</div>
-        <div class="stack-desc">Redemptions · Extensions · Layaways · Retail (cash % only)</div>
+        <div class="stack-desc">Redemptions, Extensions, Layaways, Retail (cash % only)</div>
       </div>
-      <div class="stack-val green" id="cashin-val">—</div>
+      <div class="stack-val green" id="cashin-val">-</div>
     </div>
   </div>
 
-  <!-- FORMULA -->
   <div class="formula">
-    <div class="fpart"><div class="fval gold"  id="f-float">—</div><div class="flbl">Float</div></div>
+    <div class="fpart"><div class="fval gold"  id="f-float">-</div><div class="flbl">Float</div></div>
     <div class="fop">+</div>
-    <div class="fpart"><div class="fval red"   id="f-out">—</div><div class="flbl">Cash Out</div></div>
-    <div class="fop">−</div>
-    <div class="fpart"><div class="fval green" id="f-in">—</div><div class="flbl">Cash In</div></div>
+    <div class="fpart"><div class="fval red"   id="f-out">-</div><div class="flbl">Cash Out</div></div>
+    <div class="fop">-</div>
+    <div class="fpart"><div class="fval green" id="f-in">-</div><div class="flbl">Cash In</div></div>
     <div class="fop">=</div>
-    <div class="fpart"><div class="fval gold"  id="f-total">—</div><div class="flbl">Start With</div></div>
+    <div class="fpart"><div class="fval gold"  id="f-total">-</div><div class="flbl">Start With</div></div>
   </div>
 
-  <!-- PAWN / BUY CARDS -->
   <div class="cards">
     <div class="card pawns">
       <div class="card-lbl">Pawns Out</div>
-      <div class="card-amt" id="pawns-amt">—</div>
-      <div class="card-sub" id="pawns-sub">—</div>
+      <div class="card-amt" id="pawns-amt">-</div>
+      <div class="card-sub" id="pawns-sub">-</div>
     </div>
     <div class="card buys">
       <div class="card-lbl">Buys Out</div>
-      <div class="card-amt" id="buys-amt">—</div>
-      <div class="card-sub" id="buys-sub">—</div>
+      <div class="card-amt" id="buys-amt">-</div>
+      <div class="card-sub" id="buys-sub">-</div>
     </div>
   </div>
 
-  <!-- DOW BARS -->
   <div class="dow-section">
     <div class="dow-head">Recommended Start by Day of Week</div>
     <div class="dow-bars" id="dow-bars"></div>
   </div>
 
-  <!-- CONTEXT -->
   <div class="context">
     <div class="ctx-item">
-      <div class="ctx-icon" style="background:rgba(201,168,76,0.1)">📅</div>
+      <div class="ctx-icon" style="background:rgba(201,168,76,0.1)">&#128197;</div>
       <div class="ctx-text">
-        <div class="ctx-title" id="dow-title">—</div>
-        <div class="ctx-desc"  id="dow-desc">—</div>
+        <div class="ctx-title" id="dow-title">-</div>
+        <div class="ctx-desc"  id="dow-desc">-</div>
       </div>
-      <div class="badge" id="dow-badge">—</div>
+      <div class="badge" id="dow-badge">-</div>
     </div>
     <div class="ctx-item">
-      <div class="ctx-icon" style="background:rgba(52,152,219,0.1)">📆</div>
+      <div class="ctx-icon" style="background:rgba(46,204,113,0.1)">&#128176;</div>
       <div class="ctx-text">
-        <div class="ctx-title" id="season-title">—</div>
-        <div class="ctx-desc"  id="season-desc">—</div>
+        <div class="ctx-title" id="pay-title">-</div>
+        <div class="ctx-desc"  id="pay-desc">-</div>
       </div>
-      <div class="badge" id="season-badge">—</div>
+      <div class="badge" id="pay-badge">-</div>
     </div>
     <div class="ctx-item">
-      <div class="ctx-icon" style="background:rgba(231,76,60,0.1)">⚠️</div>
+      <div class="ctx-icon" style="background:rgba(52,152,219,0.1)">&#128198;</div>
+      <div class="ctx-text">
+        <div class="ctx-title" id="season-title">-</div>
+        <div class="ctx-desc"  id="season-desc">-</div>
+      </div>
+      <div class="badge" id="season-badge">-</div>
+    </div>
+    <div class="ctx-item">
+      <div class="ctx-icon" style="background:rgba(231,76,60,0.1)">&#9888;</div>
       <div class="ctx-text">
         <div class="ctx-title">Worst Case on Record</div>
-        <div class="ctx-desc"  id="worst-desc">—</div>
+        <div class="ctx-desc"  id="worst-desc">-</div>
       </div>
     </div>
     <div class="ctx-item">
-      <div class="ctx-icon" style="background:rgba(46,204,113,0.1)">💡</div>
+      <div class="ctx-icon" style="background:rgba(46,204,113,0.1)">&#128161;</div>
       <div class="ctx-text">
         <div class="ctx-title">Recommendation</div>
-        <div class="ctx-desc"  id="rec-desc">—</div>
+        <div class="ctx-desc"  id="rec-desc">-</div>
       </div>
     </div>
   </div>
 
   <div class="footer">
-    <div class="footer-time" id="footer-time">—</div>
-  <div class="footer-time" id="data-source" style="color:#2ECC71">Loading live data...</div>
-    <div class="footer-conf">Confidential — Manager Use Only</div>
+    <div class="footer-time" id="footer-time">-</div>
+    <div class="footer-time" id="data-source" style="color:#2ECC71">Loading...</div>
+    <div class="footer-conf">Confidential - Manager Use Only</div>
   </div>
 
 </div>
 <script>
-// ── DATA ─────────────────────────────────────────────────────────────────────
-// totalStart = minFloat + net cash needed (cash out minus cash inflows)
-// minFloat   = 90th percentile morning cash drain for that DOW (rounded to $500)
-// cashOut    = projected pawns + buys × 98-99% cash rate
-// cashIn     = projected inflows × true cash rate (Redemp 54.7%, Ext 33.3%, etc.)
-// net        = cashOut − cashIn
-// worstMorning = worst recorded morning outflow before noon for that DOW
 const DATA = {
-  // Cash Out: Pawns 98.9% cash, Buys 98.1% cash
-  // Cash In:  15% of total inflows (85% paid by card)
-  // Float:    90th percentile morning drain (open to noon) for that DOW
-  // Start:    Float + (Cash Out minus Cash In)
-  // Model:    2023x1 + 2024x2 + 2025x3 + 2026x4 baseline, 25→26 growth
   dow: {
-    Monday:    { pawns:5011, buys:3386, cashOut:8278, totalInflow:6179, cashIn:927, net:7351, minFloat:3000, totalStart:10400, p90Morning:3174, worstMorning:8454, pawnsN:16.2, buysN:4.8 },
-    Tuesday:   { pawns:4211, buys:1266, cashOut:5407, totalInflow:5591, cashIn:839, net:4568, minFloat:2000, totalStart:6600, p90Morning:2075, worstMorning:9460, pawnsN:13.6, buysN:3.6 },
-    Wednesday: { pawns:3900, buys:2277, cashOut:6090, totalInflow:7266, cashIn:1090, net:5000, minFloat:2000, totalStart:7000, p90Morning:2173, worstMorning:6229, pawnsN:11.3, buysN:3.9 },
-    Thursday:  { pawns:3455, buys:1283, cashOut:4675, totalInflow:7178, cashIn:1077, net:3599, minFloat:1500, totalStart:5100, p90Morning:1624, worstMorning:4580, pawnsN:10.4, buysN:3.4 },
-    Friday:    { pawns:4740, buys:1445, cashOut:6105, totalInflow:10100, cashIn:1515, net:4590, minFloat:2000, totalStart:6600, p90Morning:2185, worstMorning:11380, pawnsN:12.0, buysN:3.6 },
-    Saturday:  { pawns:5526, buys:1896, cashOut:7325, totalInflow:8363, cashIn:1254, net:6071, minFloat:2500, totalStart:8600, p90Morning:2378, worstMorning:8420, pawnsN:15.2, buysN:4.3 },
-    Sunday:    { pawns:0, buys:0, cashOut:0, totalInflow:0, cashIn:0, net:0, minFloat:0, totalStart:0, p90Morning:0, worstMorning:0, pawnsN:0, buysN:0 },
+    Monday:    { pawns:5011, buys:3386, cashOut:8278, totalInflow:6179, cashIn:927, net:7351, minFloat:3000, totalStart:10400, p90Morning:3174, worstMorning:8454,  pawnsN:16.2, buysN:4.8, byPP:{start:9400,mid:10600,p15:9800,late:10200,end:9100} },
+    Tuesday:   { pawns:4211, buys:1266, cashOut:5407, totalInflow:5591, cashIn:839, net:4568, minFloat:2000, totalStart:6600,  p90Morning:2075, worstMorning:9460,  pawnsN:13.6, buysN:3.6, byPP:{start:6100,mid:6400,p15:6600,late:6400,end:7000} },
+    Wednesday: { pawns:3900, buys:2277, cashOut:6090, totalInflow:7266, cashIn:1090, net:5000, minFloat:2000, totalStart:7000, p90Morning:2173, worstMorning:6229,  pawnsN:11.3, buysN:3.9, byPP:{start:7500,mid:6900,p15:5900,late:6700,end:5400} },
+    Thursday:  { pawns:3455, buys:1283, cashOut:4675, totalInflow:7178, cashIn:1077, net:3599, minFloat:1500, totalStart:5100, p90Morning:1624, worstMorning:4580,  pawnsN:10.4, buysN:3.4, byPP:{start:5600,mid:5500,p15:5000,late:5100,end:4500} },
+    Friday:    { pawns:4740, buys:1445, cashOut:6105, totalInflow:10100, cashIn:1515, net:4590, minFloat:2000, totalStart:6600, p90Morning:2185, worstMorning:11380, pawnsN:12.0, buysN:3.6, byPP:{start:7200,mid:6600,p15:5400,late:6400,end:5500} },
+    Saturday:  { pawns:5526, buys:1896, cashOut:7325, totalInflow:8363, cashIn:1254, net:6071, minFloat:2500, totalStart:8600, p90Morning:2378, worstMorning:8420,  pawnsN:15.2, buysN:4.3, byPP:{start:7800,mid:7800,p15:7500,late:8200,end:8300} },
+    Sunday:    { pawns:0, buys:0, cashOut:0, totalInflow:0, cashIn:0, net:0, minFloat:0, totalStart:0, p90Morning:0, worstMorning:0, pawnsN:0, buysN:0, byPP:{start:0,mid:0,p15:0,late:0,end:0} },
   },
   monthlyNet: { 1:2522, 2:1944, 3:2157, 4:2407, 5:2283, 6:2778, 7:2492, 8:2568, 9:2968, 10:3106, 11:2821, 12:2905 },
   monthNames: ['January','February','March','April','May','June','July','August','September','October','November','December'],
   dowNotes: {
-    Monday:    'Monday is the HEAVIEST cash-out day (~16.2 loans). Plan for maximum starting cash.',
+    Monday:    'Monday is the heaviest cash-out day (~16 loans). Plan for maximum starting cash.',
     Tuesday:   'Tuesday is above average for cash demand. Card payments dominate inflows.',
-    Wednesday: 'Wednesday has strong buy activity — but 85% of inflows arrive by card, not cash.',
+    Wednesday: 'Wednesday has strong buy activity but 85% of inflows arrive by card.',
     Thursday:  'Thursday is the lightest cash-out day. Best day to replenish from the bank.',
-    Friday:    'Friday has the highest total inflows but most pay by card. Cash out is still significant.',
-    Saturday:  'Saturday is the 2nd busiest pawn day (~15.2 loans). High foot traffic.',
+    Friday:    'Friday has the highest total inflows but most pay by card.',
+    Saturday:  'Saturday is the 2nd busiest pawn day (~15 loans). High foot traffic.',
     Sunday:    'Store is CLOSED. Online extension and layaway payments only.',
+  },
+  payNotes: {
+    start:'Start of month (days 1-5): payday redemptions are high, less cash needed.',
+    mid:  'Mid-month (days 6-14): slowest redemptions, heaviest pawn days. Most cash needed.',
+    p15:  '15th payday window (days 15-17): mild redemption bump from semi-monthly payroll.',
+    late: 'Late month (days 18-26): moderate cash demand approaching month-end.',
+    end:  'End of month (days 27-31): strong redemptions as customers get end-of-month pay.',
   }
 };
 
 const fmt = n => '$' + Math.round(n).toLocaleString('en-US');
 
+function getPayPeriod(day) {
+  if (day <= 5)  return 'start';
+  if (day <= 14) return 'mid';
+  if (day <= 17) return 'p15';
+  if (day <= 26) return 'late';
+  return 'end';
+}
+
 function getToday() {
   const d = new Date();
   const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   return {
-    dow:     days[d.getDay()],
-    month:   d.getMonth()+1,
-    dateStr: d.toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'}),
-    timeStr: d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'}),
+    dow:    days[d.getDay()],
+    month:  d.getMonth()+1,
+    dayNum: d.getDate(),
+    pp:     getPayPeriod(d.getDate()),
+    dateStr:d.toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'}),
+    timeStr:d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'}),
   };
 }
 
@@ -271,41 +262,36 @@ function render() {
   const moNet = DATA.monthlyNet[today.month];
   const moName= DATA.monthNames[today.month-1];
   const isSun = today.dow === 'Sunday';
+  const adj   = (!isSun && d.byPP && d.byPP[today.pp]) ? d.byPP[today.pp] : d.totalStart;
 
-  // Header
-  document.getElementById('hdr-title').textContent = today.dow + ' — Cash Requirement';
+  document.getElementById('hdr-title').textContent = today.dow + ' - Cash Requirement';
   document.getElementById('hdr-date').textContent  = today.dateStr;
 
-  // Total
   const totalEl = document.getElementById('total-amt');
-  totalEl.textContent = isSun ? '$0' : fmt(d.totalStart);
-  totalEl.className = 'total-amount ' + (!isSun && d.totalStart >= 6000 ? 'high' : d.totalStart >= 4000 ? 'medium' : 'low');
+  totalEl.textContent = isSun ? '$0' : fmt(adj);
+  totalEl.className = 'total-amount ' + (!isSun && adj >= 8000 ? 'high' : adj >= 6000 ? 'medium' : 'low');
   document.getElementById('total-sub').textContent = isSun
-    ? 'Store closed — no cash preparation needed'
-    : 'Float + projected net cash out (based on 3-year history)';
+    ? 'Store closed - no cash preparation needed'
+    : 'Float + projected net cash out (day ' + today.dayNum + ' of month)';
 
-  // Stack
   document.getElementById('float-val').textContent  = isSun ? '$0' : fmt(d.minFloat);
-  document.getElementById('float-desc').textContent = isSun ? 'N/A — store closed'
-    : '90th percentile morning drain for ' + today.dow + 's — covers 9 out of 10 days';
+  document.getElementById('float-desc').textContent = isSun ? 'N/A - store closed'
+    : '90th percentile morning drain for ' + today.dow + 's';
   document.getElementById('net-val').textContent    = isSun ? '$0' : fmt(d.net);
   document.getElementById('net-desc').textContent   = isSun ? 'N/A'
     : 'Projected full-day cash out minus cash inflows';
-  document.getElementById('cashin-val').textContent = isSun ? fmt(d.cashIn) : fmt(d.cashIn);
+  document.getElementById('cashin-val').textContent = fmt(d.cashIn);
 
-  // Formula
   document.getElementById('f-float').textContent = isSun ? '$0' : fmt(d.minFloat);
   document.getElementById('f-out').textContent   = isSun ? '$0' : fmt(d.cashOut);
   document.getElementById('f-in').textContent    = fmt(d.cashIn);
-  document.getElementById('f-total').textContent = isSun ? '$0' : fmt(d.totalStart);
+  document.getElementById('f-total').textContent = isSun ? '$0' : fmt(adj);
 
-  // Cards
   document.getElementById('pawns-amt').textContent = fmt(d.pawns);
   document.getElementById('pawns-sub').textContent = d.pawnsN > 0 ? '~' + d.pawnsN + ' loans projected' : 'Closed today';
   document.getElementById('buys-amt').textContent  = fmt(d.buys);
   document.getElementById('buys-sub').textContent  = d.buysN  > 0 ? '~' + d.buysN  + ' purchases projected' : 'Closed today';
 
-  // DOW bars
   const barsEl  = document.getElementById('dow-bars');
   barsEl.innerHTML = '';
   const dayKeys  = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
@@ -315,195 +301,105 @@ function render() {
   const minStart = Math.min(...starts.filter(v => v > 0), 1);
 
   dayKeys.forEach((dk, i) => {
-    const val     = DATA.dow[dk].totalStart;
+    const val     = dk === today.dow ? adj : DATA.dow[dk].totalStart;
     const isToday = dk === today.dow;
     const hPct    = val > 0 ? Math.max(8, (val/maxStart)*100) : 4;
-    const cls     = isToday ? 'today'
-      : val === 0 ? 'zero'
-      : val === maxStart ? 'high'
-      : val === minStart ? 'lightest'
-      : val >= 5000 ? 'high'
-      : val >= 4000 ? 'medium'
-      : val >= 3000 ? 'low'
-      : 'lightest';
-
+    const cls     = isToday ? 'today' : val === 0 ? 'zero' : val >= 8000 ? 'high' : val >= 6000 ? 'medium' : val >= 4000 ? 'low' : 'lightest';
     const wrap = document.createElement('div'); wrap.className = 'dow-bar-wrap';
     const bar  = document.createElement('div'); bar.className = 'dow-bar '+cls; bar.style.height = hPct+'%';
     bar.title = dk + ': ' + (val > 0 ? fmt(val) : 'Closed');
     const lbl  = document.createElement('div'); lbl.className = 'dow-lbl'+(isToday?' today':''); lbl.textContent = dayShort[i];
     const cash = document.createElement('div'); cash.className = 'dow-cash'+(isToday?' today':'');
-    cash.textContent = val > 0 ? '$'+Math.round(val/100)/10+'k' : '—';
+    cash.textContent = val > 0 ? '$'+Math.round(val/100)/10+'k' : '-';
     wrap.appendChild(bar); wrap.appendChild(lbl); wrap.appendChild(cash);
     barsEl.appendChild(wrap);
   });
 
-  // DOW context
   const dowBadge = document.getElementById('dow-badge');
   document.getElementById('dow-title').textContent = today.dow + ' Pattern';
   document.getElementById('dow-desc').textContent  = DATA.dowNotes[today.dow];
-  if (isSun)                    { dowBadge.textContent='CLOSED';       dowBadge.className='badge gray';   }
-  else if (d.totalStart >= 6000){ dowBadge.textContent='Heavy Day';    dowBadge.className='badge red';    }
-  else if (d.totalStart >= 4000){ dowBadge.textContent='Moderate';     dowBadge.className='badge orange'; }
-  else if (d.totalStart >= 3000){ dowBadge.textContent='Below Average';dowBadge.className='badge yellow'; }
-  else                          { dowBadge.textContent='Lightest Day'; dowBadge.className='badge green';  }
+  if (isSun)             { dowBadge.textContent='CLOSED';       dowBadge.className='badge gray';   }
+  else if (adj >= 8000)  { dowBadge.textContent='Heavy Day';    dowBadge.className='badge red';    }
+  else if (adj >= 6000)  { dowBadge.textContent='Moderate';     dowBadge.className='badge orange'; }
+  else if (adj >= 4000)  { dowBadge.textContent='Below Average';dowBadge.className='badge yellow'; }
+  else                   { dowBadge.textContent='Lightest Day'; dowBadge.className='badge green';  }
 
-  // Seasonal
+  const ppNames = {start:'Start of Month',mid:'Mid-Month',p15:'15th Payday',late:'Late Month',end:'End of Month'};
+  const payBadge = document.getElementById('pay-badge');
+  document.getElementById('pay-title').textContent = ppNames[today.pp] + ' (day ' + today.dayNum + ')';
+  document.getElementById('pay-desc').textContent  = DATA.payNotes[today.pp];
+  const diff = adj - d.totalStart;
+  if (Math.abs(diff) < 200)  { payBadge.textContent='Average';                                      payBadge.className='badge gray';   }
+  else if (diff > 0)         { payBadge.textContent='+$'+Math.abs(diff).toLocaleString()+' vs avg'; payBadge.className='badge red';    }
+  else                       { payBadge.textContent='-$'+Math.abs(diff).toLocaleString()+' vs avg'; payBadge.className='badge green';  }
+
   const sBadge = document.getElementById('season-badge');
   document.getElementById('season-title').textContent = moName + ' Seasonal Note';
   let sdesc, sbtext, sbcls;
-  if (moNet > 1500)      { sdesc=moName+' is a HIGH cash-demand month (avg $'+moNet.toLocaleString()+'/day net). Keep reserves above the daily projection.'; sbtext='Peak Month'; sbcls='badge red'; }
-  else if (moNet > 1000) { sdesc=moName+' is above average for cash demand (avg $'+moNet.toLocaleString()+'/day net).'; sbtext='Above Avg'; sbcls='badge orange'; }
-  else if (moNet > 500)  { sdesc=moName+' is a typical cash-demand month (avg $'+moNet.toLocaleString()+'/day net).'; sbtext='Normal'; sbcls='badge yellow'; }
-  else                   { sdesc=moName+' is a lighter month for cash demand (avg $'+moNet.toLocaleString()+'/day net). Redemptions and extensions tend to offset outflows.'; sbtext='Lighter Month'; sbcls='badge green'; }
+  if (moNet > 1500)      { sdesc=moName+' typically needs more starting cash than average. Redemptions run lighter this month.'; sbtext='Higher Cash Need'; sbcls='badge red'; }
+  else if (moNet > 1000) { sdesc=moName+' is slightly above average for starting cash needs.'; sbtext='Slightly Higher'; sbcls='badge orange'; }
+  else if (moNet > 500)  { sdesc=moName+' is a typical month - starting cash needs are near average.'; sbtext='Normal'; sbcls='badge yellow'; }
+  else                   { sdesc=moName+' is a lighter month - redemptions tend to run higher, reducing cash needed.'; sbtext='Lower Cash Need'; sbcls='badge green'; }
   document.getElementById('season-desc').textContent = sdesc;
   sBadge.textContent = sbtext; sBadge.className = sbcls;
 
-  // Worst case
   document.getElementById('worst-desc').textContent = isSun
-    ? 'Store closed — no cash risk today.'
-    : 'The worst recorded ' + today.dow + ' morning (open to noon) saw ' + fmt(d.worstMorning) + ' go out before any inflows arrived. The float covers the 90th percentile of this range.';
+    ? 'Store closed - no cash risk today.'
+    : 'Worst recorded ' + today.dow + ' morning (open to noon): ' + fmt(d.worstMorning) + ' went out before any inflows arrived.';
 
-  // Recommendation
   document.getElementById('rec-desc').textContent = isSun
     ? 'No action needed.'
-    : 'Open with ' + fmt(d.totalStart) + ' in the drawer. This covers the ' + fmt(d.minFloat) + ' float buffer plus the projected ' + fmt(d.net) + ' net cash-out for the full day. If a single large transaction early in the day would exceed the float, pull additional cash before opening.';
+    : 'Open with ' + fmt(adj) + ' in the drawer. Covers the ' + fmt(d.minFloat) + ' float plus ' + fmt(d.net) + ' projected net cash-out.';
 
-  // Footer
   document.getElementById('footer-time').textContent = 'Loaded: ' + today.dateStr.split(',')[0] + ' at ' + today.timeStr;
 }
 
-// (render called below after fetch setup)
-
-// ── LIVE DATA FETCH FROM GOOGLE SHEETS _Ref ──────────────────────────────────
 const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRIHVlk8DjnjfHipeEPxOwjlfJqvYzgXXPPhj8h4_3KI4AeNwM7pLDdwjsjq2lsHdwsZXv76gyIB2LJ/pub?gid=755093181&single=true&output=csv";
-
-// _Ref row/col mapping
-const REF = {
-  DOW_HEADER_ROW: 0,   // row index 0 (row 1 in sheet)
-  DOW_COLS: { Monday:1, Tuesday:2, Wednesday:3, Thursday:4, Friday:5, Saturday:6, Sunday:7 },
-  SECTION_ROWS: {
-    'Pawns':0,         // data row index 1 (sheet row 2)
-    'Buys':1,
-    'Redemptions':2,
-    'Extensions':3,
-    'Layaways':4,
-    'Retail':5,
-    'Returns':6,
-    'Repairs':7,
-    'Cancelled':8,
-    'AddToLoan':9,
-    'NetDOW':10,       // sheet row 12
-  },
-  MO_HEADER_ROW: 13,  // sheet row 14
-  MO_SECTION_START: 14, // sheet row 15
-  NET_MO_ROW: 24,     // sheet row 25
-  MO_COLS: [1,2,3,4,5,6,7,8,9,10,11,12], // Jan-Dec = cols B-M (indices 1-12)
-  OUTFLOW_SECTIONS: ['Pawns','Buys','Returns','AddToLoan'],
-  INFLOW_SECTIONS:  ['Redemptions','Extensions','Layaways','Retail','Repairs','Cancelled'],
-};
-
-const MORNING_FLOATS = {
-  Monday:3000, Tuesday:2000, Wednesday:2000,
-  Thursday:1500, Friday:2000, Saturday:2500, Sunday:0
-};
-const WORST_MORNINGS = {
-  Monday:8454, Tuesday:9460, Wednesday:6229,
-  Thursday:4580, Friday:11380, Saturday:8420, Sunday:0
-};
-const PAWNS_N = { Monday:16.0, Tuesday:13.6, Wednesday:11.4, Thursday:10.3, Friday:12.1, Saturday:15.4, Sunday:0 };
-const BUYS_N  = { Monday:5.0,  Tuesday:3.7,  Wednesday:4.0,  Thursday:3.4,  Friday:3.6,  Saturday:4.4,  Sunday:0 };
+const MFLOATS = {Monday:3000,Tuesday:2000,Wednesday:2000,Thursday:1500,Friday:2000,Saturday:2500,Sunday:0};
+const WMORNS  = {Monday:8454,Tuesday:9460,Wednesday:6229,Thursday:4580,Friday:11380,Saturday:8420,Sunday:0};
+const PAWN_N  = {Monday:16.0,Tuesday:13.6,Wednesday:11.4,Thursday:10.3,Friday:12.1,Saturday:15.4,Sunday:0};
+const BUY_N   = {Monday:5.0,Tuesday:3.7,Wednesday:4.0,Thursday:3.4,Friday:3.6,Saturday:4.4,Sunday:0};
 
 function parseCSV(text) {
   return text.trim().split('\n').map(row => {
-    const cells = []; let cur = ''; let inQ = false;
-    for (let i = 0; i < row.length; i++) {
-      const ch = row[i];
-      if (ch === '"') { inQ = !inQ; }
-      else if (ch === ',' && !inQ) { cells.push(cur.trim()); cur = ''; }
-      else { cur += ch; }
-    }
-    cells.push(cur.trim());
-    return cells;
+    const cells=[]; let cur=''; let inQ=false;
+    for(let i=0;i<row.length;i++){const ch=row[i];if(ch==='"'){ inQ=!inQ;}else if(ch===','&&!inQ){cells.push(cur.trim());cur='';}else{cur+=ch;}}
+    cells.push(cur.trim()); return cells;
   });
 }
 
-function num(v) {
-  const n = parseFloat(String(v).replace(/[,$]/g,''));
-  return isNaN(n) ? 0 : n;
-}
-
-function buildDOWData(rows) {
-  const dow = {};
-  const days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
-  days.forEach(day => {
-    if (day === 'Sunday') { dow[day] = { pawns:0,buys:0,cashOut:0,totalInflow:0,cashIn:0,net:0,minFloat:0,totalStart:0,p90Morning:0,worstMorning:0,pawnsN:0,buysN:0 }; return; }
-    const dc = REF.DOW_COLS[day];
-    const pawns = num(rows[REF.SECTION_ROWS['Pawns']+1]?.[dc]);
-    const buys  = num(rows[REF.SECTION_ROWS['Buys']+1]?.[dc]);
-    const cashOut = pawns * 0.989 + buys * 0.981;
-    let totalInflow = 0;
-    REF.INFLOW_SECTIONS.forEach(sec => {
-      totalInflow += num(rows[REF.SECTION_ROWS[sec]+1]?.[dc]);
-    });
-    const cashIn = totalInflow * 0.15;
-    const net    = Math.max(cashOut - cashIn, 0);
-    const minFloat = MORNING_FLOATS[day] || 0;
-    const totalStart = Math.round((net + minFloat) / 100) * 100;
-    dow[day] = {
-      pawns: Math.round(pawns), buys: Math.round(buys),
-      cashOut: Math.round(cashOut), totalInflow: Math.round(totalInflow),
-      cashIn: Math.round(cashIn), net: Math.round(net),
-      minFloat, totalStart,
-      p90Morning: MORNING_FLOATS[day],
-      worstMorning: WORST_MORNINGS[day],
-      pawnsN: PAWNS_N[day], buysN: BUYS_N[day],
-    };
-  });
-  return dow;
-}
-
-function buildMonthlyNet(rows) {
-  const mo = {};
-  for (let m = 1; m <= 12; m++) {
-    const v = num(rows[REF.NET_MO_ROW]?.[m]);
-    mo[m] = Math.round(Math.max(v, 0));
-  }
-  return mo;
-}
+function num(v){const n=parseFloat(String(v).replace(/[,$]/g,'')); return isNaN(n)?0:n;}
 
 async function fetchLiveData() {
   try {
     const resp = await fetch(CSV_URL);
     if (!resp.ok) throw new Error('fetch failed');
-    const text = await resp.text();
-    const rows = parseCSV(text);
-    const dowData = buildDOWData(rows);
-    const moNet   = buildMonthlyNet(rows);
-    DATA.dow = dowData;
-    DATA.monthlyNet = moNet;
-    document.getElementById('data-source').textContent = 'Live data from Google Sheets';
-    document.getElementById('data-source').style.color = '#2ECC71';
+    const rows = parseCSV(await resp.text());
+    const days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    days.forEach(day => {
+      const dc = {Monday:1,Tuesday:2,Wednesday:3,Thursday:4,Friday:5,Saturday:6}[day];
+      const p=num(rows[1]?.[dc]), b=num(rows[2]?.[dc]);
+      const co=p*0.989+b*0.981;
+      const ti=[3,4,5,6,8,9].reduce((s,r)=>s+num(rows[r]?.[dc]),0);
+      const ci=ti*0.15, net=Math.max(co-ci,0), mf=MFLOATS[day];
+      const ts=Math.round((net+mf)/100)*100;
+      DATA.dow[day] = {...DATA.dow[day], pawns:Math.round(p), buys:Math.round(b), cashOut:Math.round(co), cashIn:Math.round(ci), net:Math.round(net), totalStart:ts};
+    });
+    for(let m=1;m<=12;m++){const v=num(rows[24]?.[m]); if(v>0) DATA.monthlyNet[m]=Math.round(v);}
+    document.getElementById('data-source').textContent='Live from Google Sheets';
+    document.getElementById('data-source').style.color='#2ECC71';
     render();
   } catch(e) {
-    // Fetch failed (normal when opening as local file) — baked-in data already showing
-    document.getElementById('data-source').textContent = 'Using cached projections';
-    document.getElementById('data-source').style.color = '#7f9ab5';
-    // render() already called on load — no action needed
+    document.getElementById('data-source').textContent='Cached data';
+    document.getElementById('data-source').style.color='#7f9ab5';
   }
 }
 
-// Render immediately with baked-in data so nothing is blank
 render();
-
-// Then fetch live data in background and re-render when it arrives
 fetchLiveData();
-setInterval(fetchLiveData, 30 * 60 * 1000);
-
-// Refresh display at midnight
-const now = new Date();
-const msTil = new Date(now.getFullYear(),now.getMonth(),now.getDate()+1) - now;
-setTimeout(() => { fetchLiveData(); setInterval(fetchLiveData, 86400000); }, msTil);
-
+setInterval(fetchLiveData, 30*60*1000);
+const _n=new Date(), _m=new Date(_n.getFullYear(),_n.getMonth(),_n.getDate()+1)-_n;
+setTimeout(()=>{fetchLiveData();setInterval(fetchLiveData,86400000);},_m);
 </script>
 </body>
 </html>
